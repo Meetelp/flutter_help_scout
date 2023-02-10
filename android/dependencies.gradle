@@ -1,4 +1,4 @@
 ext {
-    beaconVersion = '4.1.0'
+    beaconVersion = '+'
     kotlin_version = '1.6.10'
 }

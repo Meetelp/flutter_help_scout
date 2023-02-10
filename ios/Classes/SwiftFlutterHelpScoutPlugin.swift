@@ -36,7 +36,7 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
         let query = arguments!["query"] as? String
         
         // open beacon
-        openBeaconSearch(beaconId: beaconId!, query: query ?? "")
+        openBeaconSearch(beaconId: beaconId!, query: query!)
       
         result("Beacon search open successfully!")
     }
@@ -46,7 +46,7 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
         let articleId = arguments!["articleId"] as? String
         
         // open beacon
-        openBeaconArticle(beaconId: beaconId!, articleId: articleId ?? "")
+        openBeaconArticle(beaconId: beaconId!, articleId: articleId!)
       
         result("Beacon article open successfully!")
     }
@@ -109,7 +109,7 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
 
         let value = arguments!["value"] as? String
 
-        setCustomerProperty(key: key ?? "", value: value ?? "")
+        setCustomerProperty(key: key!, value: value!)
       
         result("Customer propery successfully set!")
     }
@@ -118,7 +118,7 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
      
         let key = arguments!["key"] as? String
 
-        removeCustomerProperty(key: key ?? "")
+        removeCustomerProperty(key: key!)
       
         result("Customer propery removed successfully!")
     }
