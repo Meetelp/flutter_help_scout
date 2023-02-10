@@ -9,31 +9,27 @@ class FlutterHelpScout {
   /// This is your beacon ID
   final String beaconId;
 
-  /// This is the user's name
-  final String? name;
-
-  /// This is the user's email address
-  final String? email;
-
-  /// This is the user's avatar/photo
-  final String? avatar;
-
-  /// This is the user's company
-  final String? company;
-
-  /// This is the user's job title
-  final String? jobTitle;
-
-  FlutterHelpScout(
-      {this.email,
-      this.name,
-      required this.beaconId,
-      this.avatar,
-      this.company,
-      this.jobTitle});
+  FlutterHelpScout({
+    required this.beaconId,
+  });
 
   /// This method will initialize the beacon.
-  Future<String?> initialize() async {
+  Future<String?> initialize({
+    /// This is the user's name
+    String? name,
+
+    /// This is the user's email address
+    String? email,
+
+    /// This is the user's avatar/photo
+    String? avatar,
+
+    /// This is the user's company
+    String? company,
+
+    /// This is the user's job title
+    String? jobTitle,
+  }) async {
     var data = <String, dynamic>{
       'beaconId': beaconId,
       'email': email,
@@ -60,7 +56,7 @@ class FlutterHelpScout {
   /// Whenever you want to invoke Beacon, use the code below to
   /// display the Beacon user interface.
 
-  Future<String?> open({required String beaconId}) async {
+  Future<String?> open() async {
     var data = <String, dynamic>{
       'beaconId': beaconId,
     };
@@ -80,7 +76,6 @@ class FlutterHelpScout {
 
   Future<String?> openSearch({
     required String query,
-    required String beaconId,
   }) async {
     var data = <String, dynamic>{
       'query': query,
@@ -102,7 +97,6 @@ class FlutterHelpScout {
 
   Future<String?> openArticle({
     required String articleId,
-    required String beaconId,
   }) async {
     var data = <String, dynamic>{
       'articleId': articleId,
@@ -122,7 +116,7 @@ class FlutterHelpScout {
     }
   }
 
-  Future<String?> openContactForm({required String beaconId}) async {
+  Future<String?> openContactForm() async {
     var data = <String, dynamic>{
       'beaconId': beaconId,
     };
@@ -139,7 +133,7 @@ class FlutterHelpScout {
     }
   }
 
-  Future<String?> openPreviousMessages({required String beaconId}) async {
+  Future<String?> openPreviousMessages() async {
     var data = <String, dynamic>{
       'beaconId': beaconId,
     };
@@ -156,7 +150,7 @@ class FlutterHelpScout {
     }
   }
 
-  Future<String?> openChat({required String beaconId}) async {
+  Future<String?> openChat() async {
     var data = <String, dynamic>{
       'beaconId': beaconId,
     };
@@ -173,7 +167,7 @@ class FlutterHelpScout {
     }
   }
 
-  Future<String?> openAsk({required String beaconId}) async {
+  Future<String?> openAsk() async {
     var data = <String, dynamic>{
       'beaconId': beaconId,
     };

@@ -34,10 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initBeacon() async {
     _beacon = FlutterHelpScout(
-        beaconId: beaconId,
-        email: 'example@example.com',
-        name: 'John Doe',
-        avatar: 'https://avatars3.githubusercontent.com/u/53996412?s=460&v=4');
+      beaconId: beaconId,
+    );
 
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
@@ -70,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         // color: Colors.blue,
         onPressed: () {
-          _beacon.open(beaconId: beaconId);
+          _beacon.open();
         },
       )),
     );
