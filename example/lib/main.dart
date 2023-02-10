@@ -28,8 +28,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // create an instance of Flutter Help Scout and pass the beacon ID and other values to it
-  FlutterHelpScout _beacon;
-  String beaconId = 'YOUR_BEACON_ID';
+  late final FlutterHelpScout _beacon;
+  String beaconId = '';
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initBeacon() async {
@@ -67,7 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: TextButton(
         child: Text(
           'Open Beacon',
-          style: TextStyle(color: Colors.white),
         ),
         // color: Colors.blue,
         onPressed: () {

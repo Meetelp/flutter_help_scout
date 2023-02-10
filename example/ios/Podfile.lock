@@ -2,7 +2,7 @@ PODS:
   - Beacon (2.1.2)
   - Flutter (1.0.0)
   - flutter_help_scout (0.0.1):
-    - Beacon (= 2.1.2)
+    - Beacon
     - Flutter
 
 DEPENDENCIES:
@@ -21,9 +21,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Beacon: ae5e468220ab804800d8e39ca6c7860ff70f1bd5
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_help_scout: 4ac54a134420ad2c05c1e892d28e9e43dd435e4f
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_help_scout: a388964d6caea5901a98ec200e6e1c489dbafcd5
 
 PODFILE CHECKSUM: 7368163408c647b7eb699d0d788ba6718e18fb8d
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.3

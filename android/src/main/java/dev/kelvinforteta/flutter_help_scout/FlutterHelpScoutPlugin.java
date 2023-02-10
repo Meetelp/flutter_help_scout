@@ -60,6 +60,36 @@ public class FlutterHelpScoutPlugin implements FlutterPlugin, MethodCallHandler,
 			result.success("Beacon successfully opened!");
 		}
 
+    else if (call.method.equals("openBeaconSearch")) {
+			beaconHelpers.openBeaconSearch(context, (String) arguments.get("query"),);
+			result.success("Beacon search successfully opened!");
+		}
+
+    else if (call.method.equals("openBeaconArticle")) {
+			beaconHelpers.openBeacon(context, (String) arguments.get("articleId"));
+			result.success("Beacon article successfully opened!");
+		}
+
+    else if (call.method.equals("openBeaconContactForm")) {
+      beaconHelpers.openBeaconContactForm(context);
+      result.success("Beacon contact form successfully opened!");
+    }
+
+    else if (call.method.equals("openBeaconPreviousMessages")) {
+      beaconHelpers.openBeaconPreviousMessages(context);
+      result.success("Beacon previous messages successfully opened!");
+    }
+
+    else if (call.method.equals("openBeaconChat")) {
+      beaconHelpers.openBeaconChat(context);
+      result.success("Beacon chat successfully opened!");
+    }
+
+    else if (call.method.equals("openBeaconAsk")) {
+      beaconHelpers.openBeaconAsk(context);
+      result.success("Beacon ask successfully opened!");
+    }
+
 		else if (call.method.equals("logoutBeacon")) {
 			beaconHelpers.logout();
 			result.success("Beacon successfully logged out!");

@@ -60,7 +60,7 @@ class FlutterHelpScout {
   /// Whenever you want to invoke Beacon, use the code below to
   /// display the Beacon user interface.
 
-  Future<String?> open({String? beaconId}) async {
+  Future<String?> open({required String beaconId}) async {
     var data = <String, dynamic>{
       'beaconId': beaconId,
     };
@@ -68,6 +68,118 @@ class FlutterHelpScout {
     try {
       final String? result = await _channel.invokeMethod(
         'openBeacon',
+        data,
+      );
+
+      return result;
+    } on PlatformException catch (e) {
+      print('Unable to open beacon: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<String?> openSearch({
+    required String query,
+    required String beaconId,
+  }) async {
+    var data = <String, dynamic>{
+      'query': query,
+      'beaconId': beaconId,
+    };
+
+    try {
+      final String? result = await _channel.invokeMethod(
+        'openBeaconSearch',
+        data,
+      );
+
+      return result;
+    } on PlatformException catch (e) {
+      print('Unable to open beacon: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<String?> openArticle({
+    required String articleId,
+    required String beaconId,
+  }) async {
+    var data = <String, dynamic>{
+      'articleId': articleId,
+      'beaconId': beaconId,
+    };
+
+    try {
+      final String? result = await _channel.invokeMethod(
+        'openBeaconArticle',
+        data,
+      );
+
+      return result;
+    } on PlatformException catch (e) {
+      print('Unable to open beacon: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<String?> openContactForm({required String beaconId}) async {
+    var data = <String, dynamic>{
+      'beaconId': beaconId,
+    };
+    try {
+      final String? result = await _channel.invokeMethod(
+        'openBeaconContactForm',
+        data,
+      );
+
+      return result;
+    } on PlatformException catch (e) {
+      print('Unable to open beacon: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<String?> openPreviousMessages({required String beaconId}) async {
+    var data = <String, dynamic>{
+      'beaconId': beaconId,
+    };
+    try {
+      final String? result = await _channel.invokeMethod(
+        'openBeaconPreviousMessages',
+        data,
+      );
+
+      return result;
+    } on PlatformException catch (e) {
+      print('Unable to open beacon: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<String?> openChat({required String beaconId}) async {
+    var data = <String, dynamic>{
+      'beaconId': beaconId,
+    };
+    try {
+      final String? result = await _channel.invokeMethod(
+        'openBeaconChat',
+        data,
+      );
+
+      return result;
+    } on PlatformException catch (e) {
+      print('Unable to open beacon: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<String?> openAsk({required String beaconId}) async {
+    var data = <String, dynamic>{
+      'beaconId': beaconId,
+    };
+    try {
+      final String? result = await _channel.invokeMethod(
+        'openBeaconAsk',
         data,
       );
 
