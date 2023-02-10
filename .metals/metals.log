@@ -34,3 +34,8 @@ WARNING: Unmatched cancel notification for request id 645
 2023.02.10 02:41:05 WARN  no build target for: /Users/rimantovas/Projects/meetelp/flutter_help_scout/android/src/main/java/dev/kelvinforteta/flutter_help_scout/FlutterHelpScoutPlugin.java
 Feb 10, 2023 2:48:41 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Feb 10, 2023 2:51:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 884
+Feb 10, 2023 2:53:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 946
+2023.02.10 02:57:42 WARN  no build target for: /Users/rimantovas/Projects/meetelp/flutter_help_scout/android/src/main/java/dev/kelvinforteta/flutter_help_scout/FlutterHelpScoutPlugin.java

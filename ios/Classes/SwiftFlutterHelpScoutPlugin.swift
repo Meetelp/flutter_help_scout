@@ -46,6 +46,33 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
       
         result("Beacon reset successfully!")
     }
+
+    else if(call.method.elementsEqual("setCustomerProperty")){
+     
+        let key = arguments!["key"] as? String
+
+        let value = arguments!["value"] as? String
+
+        setCustomerProperty(key: key, value: value)
+      
+        result("Customer propery successfully set!")
+    }
+
+    else if(call.method.elementsEqual("removeCustomerProperty")){
+     
+        let key = arguments!["key"] as? String
+
+        removeCustomerProperty(key: key)
+      
+        result("Customer propery removed successfully!")
+    }
+
+    else if(call.method.elementsEqual("clearCustomerProperties")){
+     
+        clearCustomerProperties()
+      
+        result("Customer properties cleared successfully!")
+    }
     
   }
     
@@ -82,6 +109,21 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
   // reset beacon
   public func resetBeacon(){
     HSBeacon.reset()
+  }
+
+  public func setCustomerProperty(key: String, value: String){
+    let user = HSBeaconUser()
+    user.addAttribute(withKey: key, value: value)
+  }
+
+  public func removeCustomerProperty(key: String){
+    let user = HSBeaconUser()
+    user.removeAttribute(withKey: key)
+  }
+
+  public func clearCustomerProperties(){
+    let user = HSBeaconUser()
+    user.clearAttributes()
   }
     
 }

@@ -77,12 +77,12 @@ public class FlutterHelpScoutPlugin implements FlutterPlugin, MethodCallHandler,
 
 		else if (call.method.equals("removeCustomerProperty")) {
 			beaconHelpers.removeCustomerProperty((String) arguments.get("key"));
-			result.success("Customer propery successfully set!");
+			result.success("Customer propery removed successfully!");
 		}
 
 		else if (call.method.equals("clearCustomerProperties")) {
 			beaconHelpers.clearCustomerProperties();
-			result.success("Customer propery successfully set!");
+			result.success("Customer properties cleared successfully!");
 		}
 
 	}

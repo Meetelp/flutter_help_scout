@@ -112,4 +112,49 @@ class FlutterHelpScout {
       throw e;
     }
   }
+
+  Future<void> setCustomerPropery(
+      {required String key, required String value}) async {
+    var data = <String, dynamic>{
+      'key': key,
+      'value': value,
+    };
+
+    try {
+      await _channel.invokeMethod(
+        'setCustomerProperty',
+        data,
+      );
+    } on PlatformException catch (e) {
+      print('Unable to set customer property: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<void> removeCustomerProperty({required String key}) async {
+    var data = <String, dynamic>{
+      'key': key,
+    };
+
+    try {
+      await _channel.invokeMethod(
+        'removeCustomerProperty',
+        data,
+      );
+    } on PlatformException catch (e) {
+      print('Unable to remove customer property: ${e.toString()}');
+      throw e;
+    }
+  }
+
+  Future<void> clearCustomerProperties() async {
+    try {
+      await _channel.invokeMethod(
+        'clearCustomerProperties',
+      );
+    } on PlatformException catch (e) {
+      print('Unable to clear customer properties: ${e.toString()}');
+      throw e;
+    }
+  }
 }
