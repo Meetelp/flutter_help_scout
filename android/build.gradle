@@ -23,7 +23,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 21
@@ -33,7 +33,9 @@ android {
     }
 }
 dependencies {
-    implementation "com.helpscout:beacon-ui:$beaconVersion"
+    implementation "com.helpscout:beacon:$beaconVersion"
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.squareup.okhttp3:mockwebserver:+'
+    implementation 'com.squareup.okhttp3:logging-interceptor:+'
 }

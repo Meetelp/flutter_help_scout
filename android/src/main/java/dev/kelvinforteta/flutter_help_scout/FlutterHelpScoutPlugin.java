@@ -61,12 +61,12 @@ public class FlutterHelpScoutPlugin implements FlutterPlugin, MethodCallHandler,
 		}
 
     else if (call.method.equals("openBeaconSearch")) {
-			beaconHelpers.openBeaconSearch(context, (String) arguments.get("query"),);
+			beaconHelpers.openBeaconSearch(context, (String) arguments.get("query"));
 			result.success("Beacon search successfully opened!");
 		}
 
     else if (call.method.equals("openBeaconArticle")) {
-			beaconHelpers.openBeacon(context, (String) arguments.get("articleId"));
+			beaconHelpers.openBeaconArticle(context, (String) arguments.get("articleId"));
 			result.success("Beacon article successfully opened!");
 		}
 

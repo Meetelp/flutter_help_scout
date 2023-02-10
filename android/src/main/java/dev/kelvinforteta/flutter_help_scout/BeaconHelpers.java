@@ -4,6 +4,7 @@ import android.content.Context;
 import com.helpscout.beacon.model.BeaconScreens;
 import com.helpscout.beacon.Beacon;
 import com.helpscout.beacon.ui.BeaconActivity;
+import java.util.ArrayList; 
 
 class BeaconHelpers {
 
