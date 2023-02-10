@@ -44,7 +44,30 @@ class BeaconHelpers {
     * you are using different Beacons in different parts of your app.
     */
     public void clear(){
-        Beacon.logout();
+        Beacon.clear();
+    }
+
+
+    /*
+    * Set custom attributes for the current user.
+    */
+    public void setCustomerProperty(String key, String value){
+        Beacon.addAttributeWithKey(key, value);
+    }
+
+
+    /*
+    * Remove a custom attribute for the current user.
+    */
+    public void removeCustomerProperty(String key){
+        Beacon.removeAttribute(key);
+    }
+
+    /*
+    * Remove all custom attributes for the current user.
+    */
+    public void clearCustomerProperties(){
+        Beacon.clearAttributes();
     }
 
 
