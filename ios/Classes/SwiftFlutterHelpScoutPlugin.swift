@@ -49,9 +49,9 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
 
     else if(call.method.elementsEqual("setCustomerProperty")){
      
-        let key = arguments!["key"] as? String
+        let key = arguments!["key"] as! String
 
-        let value = arguments!["value"] as? String
+        let value = arguments!["value"] as! String
 
         setCustomerProperty(key: key, value: value)
       
@@ -60,7 +60,7 @@ public class SwiftFlutterHelpScoutPlugin: NSObject, FlutterPlugin {
 
     else if(call.method.elementsEqual("removeCustomerProperty")){
      
-        let key = arguments!["key"] as? String
+        let key = arguments!["key"] as! String
 
         removeCustomerProperty(key: key)
       
